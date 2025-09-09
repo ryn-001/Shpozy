@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import './Header.css';
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {Aavtar,Button,Stack} from "@mui/material";
+import Register from './Register'
 
 const Header = ({ children, hasHiddenButtons }) => {
     const navigate = useNavigate();
