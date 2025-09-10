@@ -1,6 +1,10 @@
 import React,{useState} from "react";
 import Box from "@mui/material/Box";
 import {Button,CircularProgress,TextField,Stack} from "@mui/material";
+import "./Register.css"
+import Header from "./Header"
+import {Link} from "react-router-dom"
+import theme from "../theme"
 
 const Register = () => {
 
@@ -29,7 +33,7 @@ const Register = () => {
 
             <Box className="content">
                 <Stack spacing={2} className="form">
-                    <h2 className="register">Register</h2>
+                    <h2 className="title">Register</h2>
                         <TextField
                             id="username"
                             label="Username"
@@ -78,7 +82,10 @@ const Register = () => {
 
                         <p className="secondary-action">
                             Already have an account ? {" "}
-                            <Link to="/login" onClick={handleRegister}>
+                            <Link to="/login" style={{
+                                textDecoration: "none",
+                                color: theme.palette.primary.dark
+                            }} onClick={handleRegister}>
                                 Login Here
                             </Link>
                         </p>
